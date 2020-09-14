@@ -100,50 +100,58 @@
 </head>
 
 <body>
-    <header style="display: none;">
-        <ul style="display: none;">
-            <li><a href="#" class="active">Maandag</a></li>
-            <li><a href="#">Dinsdag</a></li>
-            <li><a href="#">Woensdag</a></li>
-            <li><a href="#">Donderdag</a></li>
-            <li><a href="#">Vrijdag</a></li>
-        </ul>
-    </header>
-    <main style="display: none;">
-        <div class="row">
-            <div class="block"></div>
-            <div class="block" id="block">
-                <p style="display: none;">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui mauris, dictum quis arcu
-                    mattis, facilisis suscipit tellus. Morbi non tincidunt ex, quis molestie magna. Suspendisse sed
-                    porta diam. Integer sed purus varius, facilisis mauris vulputate, pellentesque massa. Cras suscipit
-                    massa pharetra, malesuada ligula ut, vehicula arcu. Curabitur sodales est orci, eget viverra nulla
-                    scelerisque non. Sed tincidunt sagittis neque quis consectetur. Vivamus eget purus et eros vehicula
-                    convallis. Ut sit amet nunc consequat diam rutrum pellentesque sit amet quis lectus. Curabitur
-                    euismod libero eu euismod pellentesque. Aenean felis erat, malesuada non urna vel, pharetra
-                    vulputate elit. Donec a est a mi dignissim ornare et ac ligula. Ut mollis pharetra sapien, vulputate
-                    gravida leo malesuada in. Morbi ut lacinia enim. Suspendisse sed justo condimentum, volutpat risus
-                    nec, commod dolor.
-                </p>
+    <button id="show">Laat de content zien</button>
+    <div style="display: none;">
+        <header style="display: none;">
+            <ul style="display: none;">
+                <li><a href="#" class="active">Maandag</a></li>
+                <li><a href="#">Dinsdag</a></li>
+                <li><a href="#">Woensdag</a></li>
+                <li><a href="#">Donderdag</a></li>
+                <li><a href="#">Vrijdag</a></li>
+            </ul>
+        </header>
+        <main style="display: none;">
+            <div class="row">
+                <div class="block"></div>
+                <div class="block" id="block">
+                    <p style="display: none;">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus dui mauris, dictum quis arcu
+                        mattis, facilisis suscipit tellus. Morbi non tincidunt ex, quis molestie magna. Suspendisse sed
+                        porta diam. Integer sed purus varius, facilisis mauris vulputate, pellentesque massa. Cras
+                        suscipit
+                        massa pharetra, malesuada ligula ut, vehicula arcu. Curabitur sodales est orci, eget viverra
+                        nulla
+                        scelerisque non. Sed tincidunt sagittis neque quis consectetur. Vivamus eget purus et eros
+                        vehicula
+                        convallis. Ut sit amet nunc consequat diam rutrum pellentesque sit amet quis lectus. Curabitur
+                        euismod libero eu euismod pellentesque. Aenean felis erat, malesuada non urna vel, pharetra
+                        vulputate elit. Donec a est a mi dignissim ornare et ac ligula. Ut mollis pharetra sapien,
+                        vulputate
+                        gravida leo malesuada in. Morbi ut lacinia enim. Suspendisse sed justo condimentum, volutpat
+                        risus
+                        nec, commod dolor.
+                    </p>
+                </div>
+                <div class="block"></div>
             </div>
-            <div class="block"></div>
-        </div>
-        <div class="row">
-            <div class="block"></div>
-            <div class="block"></div>
-        </div>
-        <div class="row">
-            <div class="block"></div>
-        </div>
-    </main>
-    <footer>
-        <ul>
-            <li><button id="knop1">Toon Header</button></li>
-            <li><button id="knop2">Vul Navigatie</button></li>
-            <li><button id="knop3">Toon blokken</button></li>
-            <li><button id="knop4">Kleur en vul box</button></li>
-        </ul>
-    </footer>
+            <div class="row">
+                <div class="block"></div>
+                <div class="block"></div>
+            </div>
+            <div class="row">
+                <div class="block"></div>
+            </div>
+        </main>
+        <footer>
+            <ul>
+                <li><button id="knop1">Toon Header</button></li>
+                <li><button id="knop2">Vul Navigatie</button></li>
+                <li><button id="knop3">Toon blokken</button></li>
+                <li><button id="knop4">Kleur en vul box</button></li>
+            </ul>
+        </footer>
+    </div>
     <script>
         const showHide = (element, btn, {
             toon = `Toon ${element}`,
@@ -182,6 +190,11 @@
             document.querySelector(`#block p`).style.display = 'block';
             document.querySelector(`#block p`).style.color = cl;
             document.querySelector(`#block `).style.backgroundColor = bg;
+        })
+
+        document.querySelector('button#show').addEventListener('click', function () {
+            document.querySelector('body > div').style.display = 'block';
+            this.style.display = 'none';
         })
     </script>
 </body>
