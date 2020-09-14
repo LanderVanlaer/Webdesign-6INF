@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        switch (prompt("Geef een dag", "maandag").toLowerCase()) {
+            case 'maandag':
+                document.write("Nog 5 dagskes te gaan, pffttt");
+                document.body.style.color = "red";
+                document.body.style.backgroundColor = "#ccc";
+                break;
+            case 'dinsdag':
+                document.write("Nog 4 dagskes te gaan, jah al 1 dagske verder");
+                document.body.style.color = "blue";
+                document.body.style.backgroundColor = "#bbb";
+                break;
+            case 'woensdag':
+                document.write("Nog 3 dagskes te gaan, halfverwege");
+                document.body.style.color = "yellow";
+                document.body.style.backgroundColor = "#aaa";
+                break;
+            case 'donderdag':
+                document.write("Nog 2 dagskes te gaan, we zijn er bijna");
+                document.body.style.color = "purple";
+                document.body.style.backgroundColor = "#a0a0a0";
+                break;
+            case 'vrijdag':
+                document.write("Nog een dagskes te gaan, komaaaaannn");
+                document.body.style.color = "green";
+                document.body.style.backgroundColor = "#abd";
+                break;
+            default:
+                document.write("Gelieve een deftige dag in te vullen");
+                break;
+        }
+    </script>
+</body>
+
+</html>
