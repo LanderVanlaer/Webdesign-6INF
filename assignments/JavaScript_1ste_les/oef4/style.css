@@ -1,0 +1,22 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: right;
+    padding-top: 150px;
+    position: relative;
+    background-color: #740023;
+    color: #00aeff;
+}
+
+ul>li {
+    list-style: none;
+}
