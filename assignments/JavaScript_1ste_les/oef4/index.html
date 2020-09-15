@@ -9,85 +9,89 @@
 </head>
 
 <body>
-    <header>
-        <h1>
-            Toets februari 2019 - Lander Van laer
-        </h1>
-    </header>
-    <aside>
-        <ul>
-            <il><a href="#">De</a></il>
-            <il><a href="#">linken</a></il>
-            <il><a href="#">hier</a></il>
-            <il><a href="#">doen</a></il>
-            <il><a href="#">niks</a></il>
-        </ul>
-    </aside>
-    <main>
-        <div>
-            Deze container heeft een breedte van 1000 pixels, de navigatiesectie links is 150 pixels breed.
-            Deze tekst begint op 5 pixels van de top en 20 pixels van de zijkant.
-            Wat volgt is een formulier dat je moet namaken.
-            Het heeft een fieldset en een legend.
-        </div>
-        <form action="" name="form">
-            <fieldset>
-                <legend>Persoonsgegevens</legend>
-                <table>
-                    <tr>
-                        <td><label for="name">Name</label></td>
-                        <td><input type="text" name="name" id="name"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="adres">Adres</label></td>
-                        <td><input type="text" name="adres" id="adres"></td>
-                    </tr>
-                    <tr>
-                        <td>Postcode</td>
-                        <td><input type="text"></td>
-                    </tr>
-                    <tr>
-                        <td><label for="date">Geboortedatum</label></td>
-                        <td><input type="date" name="date" id="date" min="1900-01-01" max="2020-01-01"></td>
-                    </tr>
-                </table>
-                <hr>
-                <section>
-                    <h3>Wat wilt u graag toegevogd zien op deze site?</h3>
-                    <ul>
-                        <li>
-                            <input type="checkbox" name="morePictures" id="morePictures">
-                            <label for="morePictures">Meer afbeeldingen</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="morePictures" id="favfavoriteLinks">
-                            <label for="favfavoriteLinks">Favoriete links</label>
-                        </li>
-                        <li>
-                            <input type="checkbox" name="morePictures" id="video">
-                            <label for="video">Videobeelden</label>
-                        </li>
-                    </ul>
-                </section>
-                <hr>
-                <section>
-                    <h3>Kunt u een algemeen oordeel geven over deze site?</h3>
-                    <input type="radio" name="judgement" value="5" id="5"><label for="5">Zeer goed</label>
-                    <input type="radio" name="judgement" value="4" id="4"><label for="4">Goed</label>
-                    <input type="radio" name="judgement" value="3" id="3"><label for="3">Matig</label>
-                    <input type="radio" name="judgement" value="2" id="2"><label for="2">Slecht</label>
-                    <input type="radio" name="judgement" value="1" id="1"><label for="1">Zeer slecht</label>
-                </section>
-                <section>
-                    <button type="submit">Formulier doorsturen</button>
-                    <button type="reset">Formulier leegmaken</button>
-                </section>
-            </fieldset>
-        </form>
-    </main>
-    <footer>
-        &copy; Lander Van laer
-    </footer>
+    <div>
+        <header>
+            <h1>
+                Toets februari 2019 - Lander Van laer
+            </h1>
+        </header>
+        <aside>
+            <ul>
+                <li><a href="#">De</a></li>
+                <li><a href="#">linken</a></li>
+                <li><a href="#">hier</a></li>
+                <li><a href="#">doen</a></li>
+                <li><a href="#">niks</a></li>
+            </ul>
+        </aside>
+        <main>
+            <div>
+                Deze container heeft een breedte van 1000 pixels, de navigatiesectie links is 150 pixels breed.
+                Deze tekst begint op 5 pixels van de top en 20 pixels van de zijkant.
+                Wat volgt is een formulier dat je moet namaken.
+                Het heeft een fieldset en een legend.
+            </div>
+            <form action="" name="form">
+                <fieldset>
+                    <legend>Persoonsgegevens</legend>
+                    <table>
+                        <tr>
+                            <td><label for="name">Name</label></td>
+                            <td><input type="text" name="name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="adres">Adres</label></td>
+                            <td><input type="text" name="adres" id="adres"></td>
+                        </tr>
+                        <tr>
+                            <td>Postcode</td>
+                            <td><input type="number" name="postalcode" id="postalcode"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="date">Geboortedatum</label></td>
+                            <td><input type="date" name="date" id="date" min="1900-01-01" max="2020-01-01"></td>
+                        </tr>
+                    </table>
+                    <hr>
+                    <section>
+                        <h3>Wat wilt u graag toegevogd zien op deze site?</h3>
+                        <ul>
+                            <li>
+                                <input type="checkbox" name="morePictures" id="morePictures">
+                                <label for="morePictures">Meer afbeeldingen</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="favfavoriteLinks" id="favfavoriteLinks">
+                                <label for="favfavoriteLinks">Favoriete links</label>
+                            </li>
+                            <li>
+                                <input type="checkbox" name="video" id="video">
+                                <label for="video">Videobeelden</label>
+                            </li>
+                        </ul>
+                    </section>
+                    <hr>
+                    <section>
+                        <h3>Kunt u een algemeen oordeel geven over deze site?</h3>
+                        <input type="radio" name="judgement" value="5" id="5" checked><label for="5">Zeer goed</label>
+                        <input type="radio" name="judgement" value="4" id="4"><label for="4">Goed</label>
+                        <input type="radio" name="judgement" value="3" id="3"><label for="3">Matig</label>
+                        <input type="radio" name="judgement" value="2" id="2"><label for="2">Slecht</label>
+                        <input type="radio" name="judgement" value="1" id="1"><label for="1">Zeer slecht</label>
+                    </section>
+                    <section>
+                        <button type="submit">Formulier doorsturen</button>
+                        <button type="reset">Formulier leegmaken</button>
+                    </section>
+                </fieldset>
+            </form>
+        </main>
+        <footer>
+            &copy; Lander Van laer
+        </footer>
+    </div>
+    <article>
+    </article>
     <script src="script.js"></script>
 </body>
 
