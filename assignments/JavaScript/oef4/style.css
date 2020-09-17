@@ -1,0 +1,69 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body>div {
+    width: 900px;
+    background-color: #740023;
+}
+
+header {
+    text-align: right;
+    padding-top: 150px;
+    position: relative;
+    color: #00aeff;
+}
+
+aside,
+body {
+    background: darkkhaki;
+}
+
+aside>ul>li>a,
+aside>ul>li>a:visited,
+aside>ul>li>a:active {
+    color: #740023;
+    text-decoration: none;
+}
+
+main {
+    background-color: rgb(50, 50, 156);
+    color: white;
+}
+
+
+
+
+ul>li {
+    list-style: none;
+}
+
+aside,
+main {
+    float: left;
+    display: block;
+}
+
+aside {
+    width: 200px;
+}
+
+main {
+    width: 700px;
+}
+
+footer {
+    clear: left;
+    background-color: rgb(50, 50, 156);
+}
+
+article {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    background-color: white;
+    font-family: monospace;
+    font-size: large;
+}

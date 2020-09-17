@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Druk hier</button>
+    <script>
+        document.querySelector("button").addEventListener("click", () => {
+            const value = Number(prompt("Wat is uw leeftijd?", 1));
+            if (!value)
+                alert("Gelieve een nummer in te vullen");
+            else if (value < 20)
+                window.open("20.html", "", "height=200px,width=200px")
+            else if (value < 25)
+                window.open("25.html", "", "height=200px,width=200px")
+            else
+                window.open("30.html", "", "height=200px,width=200px")
+        })
+    </script>
+</body>
+
+</html>
