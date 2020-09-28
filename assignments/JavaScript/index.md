@@ -5,3 +5,4 @@ Hier vind u alle taken van de 2de les
 2. [dagen van de week](oef2)
 3. [form validation, email](oef3)
 4. [volledige pagina gecombineerd](oef4)
+5. [array's](oef5)
