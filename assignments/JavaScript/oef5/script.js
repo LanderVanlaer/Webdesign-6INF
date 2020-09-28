@@ -4,7 +4,7 @@ if (!localStorage.getItem('leerlingen')) localStorage.setItem('leerlingen', "[]"
 document.querySelector("#voegLeerlingToe").addEventListener('click', () => {
     let leerling = {};
     leerling.naam = prompt("Geef de naam van de leerling", "Jos");
-    if (!leerlingen.naam) return;
+    if (!leerling.naam) return;
 
     do leerling.geslacht = prompt("Wat is het geslacht van de leerling?", "M of V").toLowerCase();
     while (!(leerling.geslacht == 'm' || leerling.geslacht == 'v'));
