@@ -30,7 +30,7 @@ document.querySelector("#toonTabel").addEventListener('click', () => {
 
     const totalLeeftijd = leerlingen.reduce((e, ll) => e + (new Date().getFullYear() - ll.geboortejaar), 0);
     const aantalJongens = leerlingen.reduce((e, ll) => ll.geslacht == 'm' ? e + 1 : e, 0)
-    document.querySelector("section").innerHTML = `
+    document.querySelector("section#details").innerHTML = `
         De leerlingen zijn samen ${totalLeeftijd} jaar oud,<br>
         De gemiddelde leeftijd is: ${totalLeeftijd / leerlingen.length} jaar,<br>
         Aantal jongens in de klas: ${aantalJongens},<br>
@@ -38,3 +38,26 @@ document.querySelector("#toonTabel").addEventListener('click', () => {
         `;
 
 });
+
+const sectionWoorden = document.querySelector("section#woorden");
+
+form.addEventListener('submit', e => {
+    e.preventDefault();
+    sectionWoorden.innerHTML = '';
+    const namen = [
+        form.woord1.value.split(''),
+        form.woord2.value.split('')
+    ];
+
+    namen.forEach(naam => {
+        naam.forEach((l, i) => sectionWoorden.innerHTML += `De letter op plaats ${++i} is ${l}<br>`)
+        sectionWoorden.innerHTML += '<br>';
+    });
+
+    const length = Math.min(...namen.map(e => e.length));
+
+    for (let i = 0; i < length; i++)
+        if (namen[0][i] == namen[1][i])
+            sectionWoorden.innerHTML += `De letter op plaats ${i+1} is dezelfde in beide woorden<br>`
+
+})
