@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #c4c45d;
+        }
+
+        main {
+            width: 1000px;
+            margin: 10px auto;
+            background-color: grey;
+            padding: 10px;
+            box-shadow: 5px 5px 10px black;
+        }
+
+        main>* {
+            width: 100%;
+        }
+
+        main header,
+        main section div {
+            background-color: white;
+            text-align: center;
+        }
+
+
+        main header {
+            color: white;
+            text-shadow: 1px 1px 15px black;
+            font-size: 20px;
+            padding: 30px;
+            margin-bottom: 10px;
+        }
+
+        main section {
+            height: 500px;
+            font-size: 0px;
+        }
+
+        main section>div {
+            width: 485px;
+            height: 100%;
+            display: inline-block;
+            font-size: medium;
+        }
+
+        #picasso,
+        #knoppen>div {
+            box-shadow: inset 5px 5px 10px black;
+        }
+
+        #picasso {
+            margin-right: 10px;
+            position: relative;
+        }
+
+        #picasso>div {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+        }
+
+        #picasso>div:nth-child(1) {
+            background-color: blue;
+            top: 200px;
+            left: 200px;
+        }
+
+        #picasso>div:nth-child(2) {
+            background-color: yellow;
+            top: 150px;
+            left: 100px;
+        }
+
+        #picasso>div:nth-child(3) {
+            background-color: red;
+            top: 250px;
+            left: 75px;
+        }
+
+        #knoppen {
+            background-color: grey;
+            vertical-align: top;
+            font-size: 0px;
+        }
+
+        #knoppen>div {
+            width: 113px;
+            height: 125px;
+            display: inline-block;
+            padding: 10px;
+            position: relative;
+            margin-top: 0px;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+
+        #knoppen>#knop1,
+        #knoppen>#knop5 {
+            margin-right: 0px;
+        }
+
+        #knoppen>#knop1 {
+            display: block;
+            margin-left: 364px;
+
+        }
+
+        #knoppen>#knop3 {
+            margin-top: 62.5px;
+        }
+
+        #knoppen>#knop4 {
+            margin-top: 121px;
+        }
+
+        #knoppen>#knop5 {
+            margin-top: 183.5px;
+        }
+
+        #knoppen>div>button {
+            width: 93px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>
+                Toets Webdesign - 6INF - Positioneren
+            </h1>
+        </header>
+        <section>
+            <div id="picasso">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div id="knoppen">
+                <div id="knop1"><button>Knop 1</button></div>
+                <div id="knop2"><button>Knop 2</button></div>
+                <div id="knop3"><button>Knop 3</button></div>
+                <div id="knop4"><button>Knop 4</button></div>
+                <div id="knop5"><button>Knop 5</button></div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

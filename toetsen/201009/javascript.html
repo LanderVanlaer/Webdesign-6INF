@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #c4c45d;
+        }
+
+        main,
+        footer {
+            width: 1000px;
+            margin: 10px auto;
+            background-color: grey;
+            padding: 10px;
+            box-shadow: 5px 5px 10px black;
+        }
+
+        main>* {
+            width: 100%;
+        }
+
+        main header,
+        main section div {
+            background-color: white;
+            text-align: center;
+        }
+
+
+        main header {
+            color: white;
+            text-shadow: 1px 1px 15px black;
+            font-size: 20px;
+            padding: 30px;
+            margin-bottom: 10px;
+        }
+
+        main section {
+            height: 500px;
+            font-size: 0px;
+        }
+
+        main section>div {
+            width: 485px;
+            height: 100%;
+            display: inline-block;
+            font-size: medium;
+        }
+
+        #picasso,
+        #knoppen>div {
+            box-shadow: inset 5px 5px 10px black;
+        }
+
+        #picasso {
+            margin-right: 10px;
+            position: relative;
+        }
+
+        #picasso>div {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            border: 1px solid black;
+        }
+
+        #picasso>div:nth-child(1) {
+            background-color: blue;
+            top: 200px;
+            left: 200px;
+        }
+
+        #picasso>div:nth-child(2) {
+            background-color: yellow;
+            top: 150px;
+            left: 100px;
+        }
+
+        #picasso>div:nth-child(3) {
+            background-color: red;
+            top: 250px;
+            left: 75px;
+        }
+
+        #picasso h3 {
+            position: absolute;
+            bottom: 50px;
+            left: 125px;
+            color: green;
+            font-size: x-large;
+            display: none;
+        }
+
+        #picasso h3.show {
+            display: block;
+        }
+
+        #knoppen {
+            background-color: grey;
+            vertical-align: top;
+            font-size: 0px;
+        }
+
+        #knoppen>div {
+            width: 113px;
+            height: 125px;
+            display: inline-block;
+            padding: 10px;
+            position: relative;
+            margin-top: 0px;
+            vertical-align: top;
+            margin-right: 10px;
+        }
+
+        #knoppen>#knop1,
+        #knoppen>#knop5 {
+            margin-right: 0px;
+        }
+
+        #knoppen>#knop1 {
+            display: block;
+            margin-left: 364px;
+
+        }
+
+        #knoppen>#knop3 {
+            margin-top: 62.5px;
+        }
+
+        #knoppen>#knop4 {
+            margin-top: 121px;
+        }
+
+        #knoppen>#knop5 {
+            margin-top: 183.5px;
+        }
+
+        #knoppen>div>button {
+            width: 93px;
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+        }
+
+        footer {
+            color: black;
+            font-size: 25px;
+            text-align: center;
+            display: none;
+        }
+
+        footer.show {
+            display: block;
+        }
+
+        body>footer>div:nth-child(2) {
+            display: none;
+        }
+
+        body>footer.change>div:nth-child(1) {
+            display: none;
+        }
+
+        body>footer.change>div:nth-child(2) {
+            display: block;
+        }
+
+        #picasso.change {
+            background-color: purple;
+        }
+
+        #picasso.change>div:nth-child(1) {
+            background: red;
+        }
+
+        #picasso.change>div:nth-child(2) {
+            background: blue;
+        }
+
+        #picasso.change>div:nth-child(3) {
+            background: yellow;
+        }
+
+        #picasso.change h3 {
+            color: yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <header>
+            <h1>
+                Toets Webdesign - 6INF - Positioneren
+            </h1>
+        </header>
+        <section>
+            <div id="picasso">
+                <div></div>
+                <div></div>
+                <div></div>
+                <h3>Schilder: <span></span></h3>
+            </div>
+            <div id="knoppen">
+                <div id="knop1"><button>Swap colors</button></div>
+                <div id="knop2"><button>Show footer</button></div>
+                <div id="knop3"><button>Change footer</button></div>
+                <div id="knop4"><button>Add titel</button></div>
+                <div id="knop5"><button>Reset</button></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div>
+            &copy; Lander Van laer
+        </div>
+        <div>
+            Andere footer
+        </div>
+    </footer>
+
+    <script>
+        const picasso = document.querySelector("#picasso");
+        const footer = document.querySelector("footer");
+        const h3Kunstwerk = document.querySelector("#picasso > h3");
+        const spanKunstwerk = h3Kunstwerk.querySelector("span");
+
+        document.querySelector("#knop1 > button").addEventListener('click', () => picasso.classList.toggle('change'));
+
+        document.querySelector("#knop2 > button").addEventListener('click', function () {
+            if (!footer.classList.contains('show')) {
+                footer.classList.add('show');
+                this.innerText = "Hide footer";
+            } else {
+                footer.classList.remove('show');
+                this.innerText = "Show footer";
+            }
+        })
+        document.querySelector("#knop3 > button").addEventListener('click', () => footer.classList.toggle('change'));
+        document.querySelector("#knop4 > button").addEventListener('click', () => {
+            h3Kunstwerk.classList.add('show');
+            spanKunstwerk.innerText = prompt("Geef een titel voor het kunstwerk", "Pikaasooo");
+        });
+        document.querySelector("#knop5 > button").addEventListener('click', () => {
+            picasso.classList.remove('change');
+            footer.classList.remove('show');
+            document.querySelector("#knop2 > button").innerText = "Show footer";
+            footer.classList.remove('change');
+            h3Kunstwerk.classList.remove('show');
+            spanKunstwerk.innerHTML = "";
+        });
+    </script>
+</body>
+
+</html>
