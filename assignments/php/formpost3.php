@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -29,7 +29,9 @@
         </fieldset>
     </form>
     <?php
-        echo "Hallo {$_POST["voornaam"]} {$_POST["achternaam"]}";
+        if (!empty($_POST)) {
+            echo "Hallo {$_POST["voornaam"]} {$_POST["achternaam"]}";
+        }
     ?>
 </body>
 </html>
