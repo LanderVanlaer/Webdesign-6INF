@@ -36,7 +36,7 @@
                     <td>Geslacht:</td>
                     <td>
                         <label>Vrouw <input value="vrouw" name="geslacht" type="radio" id="vrouw"></label>
-                        <label>Man <input value="man" name="geslacht" type="radio" id="man" required></label>
+                        <label>Man <input value="man" name="geslacht" type="radio" id="man"></label>
                     </td>
                 </tr>
                 <tr>
